@@ -191,7 +191,7 @@ gaps inner 20
 for_window [class="."] border pixel 3
 for_window [class="."] title_format "                 %title"
 
-# smart_gaps on
+#smart_gaps on
 smart_borders on
 
 

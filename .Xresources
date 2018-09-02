@@ -1,0 +1,51 @@
+URxvt.scrollBar: false
+urxvt*termName:         rxvt
+urxvt*font:                 xft:UbuntuMono:bold:size=13
+urxvt*internalBorder:  20
+urxvt*letterSpace: 0
+urxvt*boldFont:             
+urxvt*background:           #02061e
+urxvt*foreground:           #666699
+urxvt*cursorColor:          #6699CC
+urxvt*colorBD:              #CCCCFF
+
+!Visiblue
+urxvt*color0:               #333366
+urxvt*color8:               #94a3a5
+
+urxvt*color1:               #148FCA
+urxvt*color9:               #5D5D5D
+
+urxvt*color2:               #6CA5D0
+urxvt*color10:              #97A0C1
+
+urxvt*color3:               #76D580
+urxvt*color11:              #76D580
+
+urxvt*color4:               #64DCFE
+urxvt*color12:              #64DCFE
+
+urxvt*color5:               #268bd2
+urxvt*color13:              #54837e
+
+urxvt*color6:               #ec0048
+urxvt*color14:              #d33682
+
+urxvt*color7:               #2aa198
+urxvt*color15:              #4BB8FD
+
+urxvt*transparent: true
+urxvt*shading:10
+
+rofi.color-enabled: true
+rofi.color-window: #101010, #b58900, #333366
+rofi.color-normal: #101010, #ffffff, #181818, #333366, #ffffff
+rofi.color-active: #101010, #ec0048, #181818, #333366, #ffffff
+rofi.color-urgent: #101010, #f3843d, #181818, #333366, #ffc39c
+rofi.separator-style:solid
+rofi.font:xos4 Terminess Powerline 8
+rofi.bw: 2
+rofi.width: -80
+rofi.scroll-method: 1
+rofi.fixed-num-lines: false
+!rofi.lines: 10
