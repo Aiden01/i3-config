@@ -93,44 +93,48 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-exec_always --no-startup-id xrandr --output eDP1 --right-of HDMI1 --auto
-
+# variables
 set $monitor1 eDP1
 set $monitor2 HDMI1
+set $ws1 1
 set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
 
-workspace 1 output $monitor2
-workspace 2 output $monitor2
-workspace 3 output $monitor1
-workspace 4 output $monitor2
+workspace $ws1 output $monitor2
+workspace $ws2 output $monitor2
+workspace $ws3 output $monitor1
+workspace $ws4 output $monitor2
 
 # switch to workspace
-bindsym $mod+1 workspace 1
+bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $wk2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 assign [class="Code - Insiders"] $ws2
+assign [class="Firefox"] $ws3
 
-exec --no-startup-id compton
 
 ### volume
 # Pulse Audio controls
@@ -203,7 +207,9 @@ client.urgent           #148FCA #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #1C1120 #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
-
+# programs on startup
+exec --no-startup-id compton
+exec_always --no-startup-id xrandr --output eDP1 --right-of HDMI1 --auto
 exec_always --no-startup-id "killall polybar; polybar -r default"
 exec_always --no-startup-id "xrdb -load ~/.config/.Xresources"
 exec --no-startup-id "feh --bg-scale wallpapers/other.jpg"
